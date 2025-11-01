@@ -1,4 +1,4 @@
-package com.nicos.material3expressivelist.presentation.expressive_list_screen
+package com.nicos.material3expressivelist.presentation.expressive_list_screen.models
 
 import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
 
