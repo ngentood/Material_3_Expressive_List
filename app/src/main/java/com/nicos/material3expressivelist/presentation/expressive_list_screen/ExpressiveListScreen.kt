@@ -2,9 +2,12 @@
 
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.copy
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsFocusedAsState
+import androidx.compose.foundation.interaction.collectIsHoveredAsState
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -85,6 +88,11 @@ fun ExpressiveListItem(
         label = "scale"
     )
 
+    val cornerRadius by animateDpAsState(
+        targetValue = if (isPressed) 30.dp else 15.dp, // More rounded when pressed
+        label = "cornerRadius"
+    )
+
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -93,8 +101,8 @@ fun ExpressiveListItem(
                 scaleX = scale
                 scaleY = scale
                 this.shadowElevation = 15.dp.toPx()
-                this.spotShadowColor = Color.Black.copy(alpha = 0.4f)
-                this.ambientShadowColor = Color.Black.copy(alpha = 0.3f)
+                this.spotShadowColor = Purple80.copy(alpha = 0.4f)
+                this.ambientShadowColor = Purple80.copy(alpha = 0.3f)
             },
     ) {
         ElevatedButton(
@@ -103,18 +111,13 @@ fun ExpressiveListItem(
                 .fillMaxWidth(),
             interactionSource = interactionSource,
             colors = ButtonDefaults.buttonColors(containerColor = Purple80),
-            shape = RoundedCornerShape(15.dp),
+            shape = RoundedCornerShape(cornerRadius),
             elevation = buttonElevation(
                 defaultElevation = 15.dp,
                 pressedElevation = 2.dp
             ),
-            /*modifierWithShadow = Modifier.graphicsLayer {
-                this.shadowElevation = 15.dp.toPx() // Ensure this matches defaultElevation
-                this.spotShadowColor = Color.Black.copy(alpha = 0.4f) // Darker spot shadow
-                this.ambientShadowColor = Color.Black.copy(alpha = 0.2f) // Darker ambient shadow
-            },*/
             onClick = {
-                //screen(item.screenRoutes)
+                screen(item.screenRoutes)
             }) {
             Text(
                 item.title,
