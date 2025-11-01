@@ -31,6 +31,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -38,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.models.ExpressiveListDataModel
 import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
 import com.nicos.material3expressivelist.ui.theme.Purple80
@@ -51,7 +53,7 @@ fun ExpressiveListRoot(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        "Expressive List",
+                        stringResource(id = R.string.material_expressive_list),
                         textAlign = TextAlign.Center,
                         style = TextStyle(
                             fontSize = 21.sp,
