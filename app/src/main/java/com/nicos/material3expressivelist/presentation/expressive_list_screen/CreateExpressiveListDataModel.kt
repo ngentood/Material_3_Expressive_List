@@ -21,6 +21,13 @@ class CreateExpressiveListDataModel(
                 )
             )
 
+            list.add(
+                ExpressiveListDataModel(
+                    context.getString(R.string.split_buttons),
+                    screenRoutes = ScreenRoutes.SplitButtonsScreen
+                )
+            )
+
             emit(list)
         }
     }
