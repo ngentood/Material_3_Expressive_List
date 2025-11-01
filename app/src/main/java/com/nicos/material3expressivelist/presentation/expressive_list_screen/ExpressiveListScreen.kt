@@ -53,7 +53,7 @@ fun ExpressiveListRoot(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        stringResource(id = R.string.material_expressive_list),
+                        stringResource(id = R.string.material_expressive_showcase),
                         textAlign = TextAlign.Center,
                         style = TextStyle(
                             fontSize = 21.sp,
