@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@file:OptIn(ExperimentalMaterial3ExpressiveApi::class, ExperimentalMaterial3Api::class)
 
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
@@ -17,15 +17,19 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonDefaults.buttonElevation
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -42,7 +46,26 @@ import com.nicos.material3expressivelist.ui.theme.Purple80
 fun ExpressiveListRoot(
     navController: NavHostController,
 ) {
-    Scaffold { paddingValues ->
+    Scaffold(
+        topBar = {
+            CenterAlignedTopAppBar(
+                title = {
+                    Text(
+                        "Expressive List",
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 21.sp,
+                            fontWeight = FontWeight.Bold
+                        ),
+                        color = Color.Black
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Purple80
+                )
+            )
+        },
+    ) { paddingValues ->
         ExpressiveListScreen(
             paddingValues = paddingValues,
             screen = { navController.navigate(it) }
