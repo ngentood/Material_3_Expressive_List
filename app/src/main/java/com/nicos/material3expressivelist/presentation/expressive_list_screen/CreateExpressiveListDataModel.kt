@@ -44,21 +44,21 @@ class CreateExpressiveListDataModel(
 
             list.add(
                 ExpressiveListDataModel(
-                    "",
+                    context.getString(R.string.fab_menu),
                     screenRoutes = ScreenRoutes.FabMenuScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
-                    "",
+                    context.getString(R.string.floating_toolbar_with_list),
                     screenRoutes = ScreenRoutes.FloatingToolBarWithListScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
-                    "",
+                    context.getString(R.string.floating_toolbar),
                     screenRoutes = ScreenRoutes.FloatingToolBarScreen
                 )
             )
