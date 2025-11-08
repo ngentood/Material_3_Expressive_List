@@ -22,6 +22,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -53,9 +54,9 @@ fun ButtonGroupsRoot(
             verticalArrangement = Arrangement.spacedBy(30.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Title("Multiple Selection")
+            Title(stringResource(R.string.multiple_selection))
             ButtonsGroup()
-            Title("Single Selection")
+            Title(stringResource(R.string.single_selection))
             ButtonsGroup(isSingleSelection = true)
         }
     }
@@ -75,7 +76,10 @@ fun Title(text: String) {
 fun ButtonsGroup(
     isSingleSelection: Boolean = false,
 ) {
-    val options = listOf("Work", "Restaurant", "Coffee")
+    val options = listOf(
+        stringResource(R.string.work),
+        stringResource(R.string.restaurant), stringResource(R.string.coffee)
+    )
     val unCheckedIcons: List<Int> =
         listOf(
             R.drawable.work_24px,
@@ -142,7 +146,7 @@ fun ContainerButton(
 ) {
     Icon(
         painter = painterResource(id = if (checked[index]) checkedIcons[index] else unCheckedIcons[index]),
-        contentDescription = "Localized description",
+        contentDescription = checkedIcons[index].toString(),
     )
     Spacer(Modifier.size(ToggleButtonDefaults.IconSpacing))
     Text(label)
