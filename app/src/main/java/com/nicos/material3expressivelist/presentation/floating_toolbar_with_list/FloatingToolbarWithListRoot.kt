@@ -109,7 +109,11 @@ fun FloatingToolbarWithList(
             content = {
                 IconButton(
                     onClick = {
-                        Toast.makeText(context, "Settings", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context,
+                            context.getString(R.string.settings),
+                            Toast.LENGTH_SHORT
+                        ).show()
                     },
                 ) {
                     Icon(
@@ -119,31 +123,40 @@ fun FloatingToolbarWithList(
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 IconButton(onClick = {
-                    Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, context.getString(R.string.edit), Toast.LENGTH_SHORT)
+                        .show()
                 }) {
                     Icon(
                         painter = painterResource(id = R.drawable.edit_24px),
-                        contentDescription = "Edit"
+                        contentDescription = stringResource(R.string.edit),
                     )
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 IconButton(
                     enabled = true,
                     onClick = {
-                        Toast.makeText(context, "Back", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context,
+                            context.getString(R.string.back),
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_baseline_arrow_back_24),
-                        contentDescription = "Back"
+                        contentDescription = stringResource(R.string.back)
+
                     )
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 IconButton(enabled = true, onClick = {
-                    Toast.makeText(context, "Processes", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.processes), Toast.LENGTH_SHORT
+                    ).show()
                 }) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_processes),
-                        contentDescription = "Processes"
+                        contentDescription = stringResource(R.string.processes)
                     )
                 }
             },
