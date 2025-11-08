@@ -32,4 +32,15 @@
     <string name="linear_progress_indicator">Linear Progress Indicator</string>
     <string name="linear_wavy_progress_indicator">Linear Wavy Progress Indicator</string>
     <string name="circular_wavy_progress_indicator">Circular Wavy Progress Indicator</string>
+    <string name="reply">Reply</string>
+    <string name="reply_all">Reply all</string>
+    <string name="forward">Forward</string>
+    <string name="snooze">Snooze</string>
+    <string name="archive">Archive</string>
+    <string name="label">Label</string>
+    <string name="list_item">List item - %1$d</string>
+    <string name="toggle_menu">Toggle menu</string>
+    <string name="expanded">Expanded</string>
+    <string name="collapsed">Collapsed</string>
+    <string name="close_menu">Close menu</string>
 </resources>

@@ -50,6 +50,7 @@ import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.customActions
@@ -59,6 +60,7 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.traversalIndex
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
 import kotlin.collections.forEachIndexed
 import kotlin.ranges.until
@@ -95,12 +97,12 @@ fun FabMenuScreen(
     val focusRequester = FocusRequester()
     val items =
         listOf(
-            Icons.AutoMirrored.Filled.Message to "Reply",
-            Icons.Filled.People to "Reply all",
-            Icons.Filled.Contacts to "Forward",
-            Icons.Filled.Snooze to "Snooze",
-            Icons.Filled.Archive to "Archive",
-            Icons.AutoMirrored.Filled.Label to "Label",
+            Icons.AutoMirrored.Filled.Message to stringResource(R.string.reply),
+            Icons.Filled.People to stringResource(R.string.reply_all),
+            Icons.Filled.Contacts to stringResource(R.string.forward),
+            Icons.Filled.Snooze to stringResource(R.string.snooze),
+            Icons.Filled.Archive to stringResource(R.string.archive),
+            Icons.AutoMirrored.Filled.Label to stringResource(R.string.label),
         )
     var fabMenuExpanded by rememberSaveable { mutableStateOf(false) }
 
@@ -112,7 +114,7 @@ fun FabMenuScreen(
             for (index in 0 until 100) {
                 item {
                     Text(
-                        text = "List item - $index",
+                        text = stringResource(R.string.list_item, index),
                         modifier = Modifier
                             .clickable {}
                             .fillMaxWidth()
@@ -133,8 +135,11 @@ fun FabMenuScreen(
                         Modifier
                             .semantics {
                                 traversalIndex = -1f
-                                stateDescription = if (fabMenuExpanded) "Expanded" else "Collapsed"
-                                contentDescription = "Toggle menu"
+                                stateDescription =
+                                    if (fabMenuExpanded) context.getString(R.string.expanded) else context.getString(
+                                        R.string.collapsed
+                                    )
+                                contentDescription = context.getString(R.string.toggle_menu)
                             }
                             .animateFloatingActionButton(
                                 visible = fabVisible || fabMenuExpanded,
@@ -167,7 +172,7 @@ fun FabMenuScreen(
                                     customActions =
                                         listOf(
                                             CustomAccessibilityAction(
-                                                label = "Close menu",
+                                                label = context.getString(R.string.close_menu),
                                                 action = {
                                                     fabMenuExpanded = false
                                                     true
