@@ -38,9 +38,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.graphics.shapes.RoundedPolygon
 import androidx.navigation.NavController
+import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
 import kotlin.ranges.rangeTo
 
@@ -75,7 +77,7 @@ fun LoadingProgressIndicatorRoot(
             )
             LoadingIndicatorInfinity(
                 paddingValues = paddingValues,
-                title = "Loading Infinity (Default)"
+                title = stringResource(R.string.loading_infinity_default)
             )
             HorizontalDivider(
                 modifier = Modifier
@@ -87,7 +89,7 @@ fun LoadingProgressIndicatorRoot(
             LoadingIndicatorInfinity(
                 paddingValues = paddingValues,
                 polygons = LoadingIndicatorDefaults.IndeterminateIndicatorPolygons,
-                title = "Loading Infinity (IndeterminateIndicatorPolygons)"
+                title = stringResource(R.string.loading_infinity_indeterminateindicatorpolygons)
             )
             HorizontalDivider(
                 modifier = Modifier
@@ -108,7 +110,7 @@ fun LoadingProgressIndicatorRoot(
                     MaterialShapes.Flower,
                     MaterialShapes.Triangle
                 ),
-                title = "Loading Infinity (Custom)"
+                title = stringResource(R.string.loading_infinity_custom)
             )
             HorizontalDivider(
                 modifier = Modifier
@@ -180,7 +182,7 @@ fun LoadingIndicatorScreen(
             polygons = polygons
         )
         Spacer(Modifier.requiredHeight(30.dp))
-        Text("Set loading progress:")
+        Text(stringResource(R.string.set_loading_progress))
         Slider(
             modifier = Modifier
                 .width(500.dp)
@@ -260,7 +262,7 @@ fun LoadingLinearIndicatorInfinity(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Linear Progress Indicator")
+        Text(text = stringResource(R.string.linear_progress_indicator))
         Spacer(Modifier.requiredHeight(30.dp))
         LinearProgressIndicator(
             progress = { progress },
@@ -297,7 +299,7 @@ fun LoadingLinearWaveIndicatorInfinity(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Linear Wavy Progress Indicator")
+        Text(text = stringResource(R.string.linear_wavy_progress_indicator))
         Spacer(Modifier.requiredHeight(30.dp))
         LinearWavyProgressIndicator(
             progress = { progress },
@@ -334,7 +336,7 @@ fun LoadingLCircularIndicatorInfinity(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Circular Wavy Progress Indicator")
+        Text(text = stringResource(R.string.circular_wavy_progress_indicator))
         Spacer(Modifier.requiredHeight(30.dp))
         CircularWavyProgressIndicator(
             progress = { progress },
