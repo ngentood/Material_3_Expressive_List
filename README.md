@@ -43,6 +43,11 @@ workflows.
 
 ## 📸 Examples
 
+
+<p align="center">
+  <img src="examples/list_of_button.png" alt="List of Expressive Components" width="250"/>
+</p>
+
 | Button Groups                                      | Split Buttons                                      | FAB Menu with List                                      |
 |----------------------------------------------------|----------------------------------------------------|---------------------------------------------------------|
 | <img src="examples/group_buttons.gif" width="200"> | <img src="examples/split_buttons.gif" width="200"> | <img src="examples/fab_menu_with_list.gif" width="200"> |
