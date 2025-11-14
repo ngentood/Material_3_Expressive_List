@@ -17,7 +17,7 @@ Material 3 features and Jetpack Compose animation techniques.
 * **Split Buttons**: Compound buttons that combine a primary action with a secondary dropdown menu.
 
 <p align="center">
-  <video src="https://github.com/NicosNicolaou16/Material_3_Expressive_List/blob/readme/examples/Screen_recording_20251114_221446.mp4" width="320">
+  <video src="https://github.com/NicosNicolaou16/Material_3_Expressive_List/blob/readme/examples/Screen_recording_20251114_222906.webm" width="320">
   </video>
   <br/>
   <em>Expressive button click animation.</em>
