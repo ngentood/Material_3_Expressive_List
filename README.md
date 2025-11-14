@@ -18,20 +18,16 @@ Material 3 features and Jetpack Compose animation techniques.
 
 ### Examples Included:
 
-| Button Groups                                      | Split Buttons                                       |
-|----------------------------------------------------|-----------------------------------------------------|
-| <img src="examples/group_buttons.gif" width="150"> | <img src="examples/split_buttons.gif" width="150">  |
-| *Single & multi-selection toggle buttons.*         | *Buttons with a primary action and secondary menu.* |
+| Button Groups                                      | Split Buttons                                       | FAB Menu with List                                      |
+|----------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------|
+| <img src="examples/group_buttons.gif" width="200"> | <img src="examples/split_buttons.gif" width="200">  | <img src="examples/fab_menu_with_list.gif" width="200"> |
+| *Single & multi-selection toggle buttons.*         | *Buttons with a primary action and secondary menu.* | *Floating Action Button that expands a menu.*           |
 
-| FAB Menu with List                                      | Progress Indicators                                     |
-|---------------------------------------------------------|---------------------------------------------------------|
-| <img src="examples/fab_menu_with_list.gif" width="150"> | <img src="examples/progress_indicator.gif" width="150"> |
-| *Floating Action Button that expands a menu.*           | *Custom-styled and animated progress indicators.*       |
-
-| Floating Toolbars with List                                     |
-|-----------------------------------------------------------------|
-| <img src="examples/floating_toolbar_with_list.gif" width="150"> |
-| *A toolbar that appears with list scrolling.*                   |
+| Floating Toolbars with List                                     | Progress Indicators                                     | (Add Next Example Here)                 |
+|-----------------------------------------------------------------|---------------------------------------------------------|-----------------------------------------|
+| <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> | <!-- Add your next GIF here -->         |
+| *A toolbar that appears with list scrolling.*                   | *Custom-styled and animated progress indicators.*       | <!-- Add your next description here --> |
 
 <br>
+
 
