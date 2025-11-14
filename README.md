@@ -43,20 +43,15 @@ workflows.
 
 ## 📸 Examples
 
+| List of Buttons                                     | Button Groups                                      | Split Buttons                                      |
+|-----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
+| <img src="examples/list_of_button.png" width="200"> | <img src="examples/group_buttons.gif" width="200"> | <img src="examples/split_buttons.gif" width="200"> |
+| *Various expressive button styles.*                 | *Toggleable single & multi-selection buttons.*     | *Primary action + secondary menu.*                 |
 
-<p align="center">
-  <img src="examples/list_of_button.png" alt="List of Expressive Components" width="250"/>
-</p>
-
-| Button Groups                                      | Split Buttons                                      | FAB Menu with List                                      |
-|----------------------------------------------------|----------------------------------------------------|---------------------------------------------------------|
-| <img src="examples/group_buttons.gif" width="200"> | <img src="examples/split_buttons.gif" width="200"> | <img src="examples/fab_menu_with_list.gif" width="200"> |
-| *Toggleable single & multi-selection buttons.*     | *Primary action + secondary menu.*                 | *FAB expanding into a menu tied to scrolling content.*  |
-
-| Floating Toolbars with List                                     | Progress Indicators                                     |
-|-----------------------------------------------------------------|---------------------------------------------------------|
-| <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> |
-| *Toolbar that appears with list scrolling.*                     | *Expressive, animated progress indicators.*             |
+| FAB Menu with List                                      | Floating Toolbars with List                                     | Progress Indicators                                     |
+|---------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------|
+| <img src="examples/fab_menu_with_list.gif" width="200"> | <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> |
+| *FAB expanding into a menu tied to scrolling content.*  | *Toolbar that appears with list scrolling.*                     | *Expressive, animated progress indicators.*             |
 
 ---
 
