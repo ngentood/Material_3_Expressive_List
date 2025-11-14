@@ -11,6 +11,19 @@ or Material 3 component.
 
 ---
 
+### 🚀 Future Implementation
+
+This project is actively maintained and will continue to grow. In the future, we plan to:
+
+- Add more **Material 3 expressive components**
+- Include **new animation and interaction patterns**
+- Keep the repository **up-to-date** with the latest Material 3 and Jetpack Compose releases
+- Expand the **sample demos** for learning and inspiration
+
+Stay tuned for updates, and contributions are always welcome!
+
+---
+
 ## ✨ Components
 
 ### **Expressive Buttons**
