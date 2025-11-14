@@ -5,7 +5,7 @@ and Material 3. It serves as a practical guide and inspiration for creating mode
 engaging user interfaces on Android. Each example is self-contained and demonstrates specific
 Material 3 features and Jetpack Compose animation techniques.
 
-### Components & Examples Included:
+### Components Included:
 
 * **Expressive Buttons**: Fluid and delightful buttons that animate on click.
 * **Button Groups**: Single and multi-selection toggleable button groups with connected styling.
@@ -15,6 +15,8 @@ Material 3 features and Jetpack Compose animation techniques.
   list scrolling.
 * **Custom Progress Indicators**: Styled and animated progress bars and indicators.
 * **Split Buttons**: Compound buttons that combine a primary action with a secondary dropdown menu.
+
+### Examples Included:
 
 | Button Groups                                      | Split Buttons                                       |
 |----------------------------------------------------|-----------------------------------------------------|
