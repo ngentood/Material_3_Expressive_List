@@ -66,7 +66,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 cd Material_3_Expressive_List
 ```
 
-## Versioning
+## 🧾 Versioning
 
 Material 3 version: 1.5.0-alpha08 <br />
 Target SDK version: 36 <br />
