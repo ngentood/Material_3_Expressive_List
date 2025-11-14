@@ -16,29 +16,20 @@ Material 3 features and Jetpack Compose animation techniques.
 * **Custom Progress Indicators**: Styled and animated progress bars and indicators.
 * **Split Buttons**: Compound buttons that combine a primary action with a secondary dropdown menu.
 
-| Button Groups                                      | FAB & Floating Menus                               |
-|----------------------------------------------------|----------------------------------------------------|
-| <img src="examples/group_buttons.gif" width="250"> | <img src="examples/split_buttons.gif" width="250"> |
-| *Single & multi-selection toggle buttons.*         | *Floating Action Button that expands a menu.*      |
-
-| Floating Toolbars                                     | Expressive Buttons                                      |
-|-------------------------------------------------------|---------------------------------------------------------|
-| <img src="examples/floating_toolbar.gif" width="250"> | <img src="examples/expressive_buttons.gif" width="250"> |
-| *A toolbar that appears with list scrolling.*         | *Buttons with fluid click animations.*                  |
-
 | Button Groups                                      | Split Buttons                                       |
 |----------------------------------------------------|-----------------------------------------------------|
 | <img src="examples/group_buttons.gif" width="250"> | <img src="examples/split_buttons.gif" width="250">  |
 | *Single & multi-selection toggle buttons.*         | *Buttons with a primary action and secondary menu.* |
 
-| Floating Toolbars                                     | Expressive Buttons                                      |
-|-------------------------------------------------------|---------------------------------------------------------|
-| <img src="examples/floating_toolbar.gif" width="250"> | <img src="examples/expressive_buttons.gif" width="250"> |
-| *A toolbar that appears with list scrolling.*         | *Buttons with fluid click animations.*                  |
+| Floating Toolbars with List                                     | Expressive Buttons                                      |
+|-----------------------------------------------------------------|---------------------------------------------------------|
+| <img src="examples/floating_toolbar_with_list.gif" width="250"> | <img src="examples/expressive_buttons.gif" width="250"> |
+| *A toolbar that appears with list scrolling.*                   | *Buttons with fluid click animations.*                  |
 
-| FAB Menus                                     | Progress Indicators                                      |
-|-----------------------------------------------|----------------------------------------------------------|
-| <img src="examples/fab_menu.gif" width="250"> | <img src="examples/progress_indicators.gif" width="250"> |
-| *Floating Action Button that expands a menu.* | *Custom-styled and animated progress indicators.*        |
+| FAB Menu with List                                      | Progress Indicators                                     |
+|---------------------------------------------------------|---------------------------------------------------------|
+| <img src="examples/fab_menu_with_list.gif" width="250"> | <img src="examples/progress_indicator.gif" width="250"> |
+| *Floating Action Button that expands a menu.*           | *Custom-styled and animated progress indicators.*       |
 
 <br>
+
