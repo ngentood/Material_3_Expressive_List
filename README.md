@@ -16,5 +16,5 @@ Material 3 features and Jetpack Compose animation techniques.
 * **Custom Progress Indicators**: Styled and animated progress bars and indicators.
 * **Split Buttons**: Compound buttons that combine a primary action with a secondary dropdown menu.
 
-![Expressive Button Animation](examples/Screen_recording_20251114_222906.gif)
+![Expressive Button Animation](examples/group_buttons.gif)
 
