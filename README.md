@@ -74,7 +74,7 @@ Minimum SDK version: 29 <br />
 Kotlin version: 2.2.21 <br />
 Gradle version: 8.13.1 <br />
 
-## References
+## 🔗 References
 
 - [Material Expressive](https://m3.material.io/blog/building-with-m3-expressive)
     - [Buttons Group](https://m3.material.io/components/button-groups/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
