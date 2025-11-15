@@ -11,7 +11,7 @@ or Material 3 component.
 
 ---
 
-### 🚀 Future Implementation
+## 🚀 Future Implementation
 
 This project is actively maintained and will continue to grow. In the future, we plan to:
 
@@ -68,7 +68,7 @@ workflows.
 
 ---
 
-# 📦 Installation & Setup
+## 📦 Installation & Setup
 
 To use or explore the expressive Material 3 components in this repository, follow these steps:
 
