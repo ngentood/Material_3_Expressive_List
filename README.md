@@ -67,15 +67,15 @@ Beautifully styled and animated linear and circular indicators, including expres
 
 ## 📸 Examples
 
-| List of Buttons                                     | Button Groups                                      | Split Buttons                                      |
-|-----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
+|                   List of Buttons                   |                   Button Groups                    |                   Split Buttons                    |
+|:---------------------------------------------------:|:--------------------------------------------------:|:--------------------------------------------------:|
 | <img src="examples/list_of_button.png" width="200"> | <img src="examples/group_buttons.gif" width="200"> | <img src="examples/split_buttons.gif" width="200"> |
-| *Various expressive button styles.*                 | *Toggleable single & multi-selection buttons.*     | *Primary action + secondary menu.*                 |
+|         *Various expressive button styles.*         |   *Toggleable single & multi-selection buttons.*   |         *Primary action + secondary menu.*         |
 
-| FAB Menu with List                                      | Floating Toolbars with List                                     | Progress Indicators                                     |
-|---------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------|
+|                   FAB Menu with List                    |                   Floating Toolbars with List                   |                   Progress Indicators                   |
+|:-------------------------------------------------------:|:---------------------------------------------------------------:|:-------------------------------------------------------:|
 | <img src="examples/fab_menu_with_list.gif" width="200"> | <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> |
-| *FAB expanding into a menu tied to scrolling content.*  | *Toolbar that appears with list scrolling.*                     | *Expressive, animated progress indicators.*             |
+| *FAB expanding into a menu tied to scrolling content.*  |           *Toolbar that appears with list scrolling.*           |       *Expressive, animated progress indicators.*       |
 
 ---
 
