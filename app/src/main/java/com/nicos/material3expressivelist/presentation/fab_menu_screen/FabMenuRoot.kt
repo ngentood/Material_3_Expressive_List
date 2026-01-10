@@ -44,19 +44,20 @@ import androidx.compose.ui.semantics.traversalIndex
 import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 import kotlin.collections.forEachIndexed
 import kotlin.to
 
 @Composable
 fun FabMenuRoot(
-    navController: NavHostController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
             CustomToolbar(
                 title = stringResource(R.string.fab_menu),
                 backButton = {
-                    navController.popBackStack()
+                    navigator.goBack()
                 }
             )
         },

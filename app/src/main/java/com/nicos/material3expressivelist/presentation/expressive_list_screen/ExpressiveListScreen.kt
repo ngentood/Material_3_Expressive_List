@@ -38,15 +38,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavHostController
+import androidx.navigation3.runtime.NavKey
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.models.ExpressiveListDataModel
-import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 import com.nicos.material3expressivelist.ui.theme.Purple80
 
 @Composable
 fun ExpressiveListRoot(
-    navController: NavHostController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
@@ -70,7 +70,7 @@ fun ExpressiveListRoot(
     ) { paddingValues ->
         ExpressiveListScreen(
             paddingValues = paddingValues,
-            screen = { navController.navigate(it) }
+            screen = { navigator.navigate(it) }
         )
     }
 }
@@ -79,7 +79,7 @@ fun ExpressiveListRoot(
 fun ExpressiveListScreen(
     paddingValues: PaddingValues,
     state: ExpressiveListViewModel = hiltViewModel(),
-    screen: (ScreenRoutes) -> Unit
+    screen: (NavKey) -> Unit
 ) {
     val collectAsState = state.items.collectAsState().value
     LazyColumn(
@@ -99,7 +99,7 @@ fun ExpressiveListScreen(
 @Composable
 fun ExpressiveListItem(
     item: ExpressiveListDataModel,
-    screen: (ScreenRoutes) -> Unit
+    screen: (NavKey) -> Unit
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
