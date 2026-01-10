@@ -71,6 +71,14 @@ dependencies {
     implementation(libs.dagger.android)
     ksp(libs.dagger.compiler)
     ksp(libs.hilt.compiler)
+    // Navigation 3
+    implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+    implementation(libs.androidx.material3.adaptive.navigation3)
+    implementation(libs.kotlinx.serialization.core)
+    // Material 3 Adaptive
+    implementation(libs.androidx.compose.material3.adaptive)
     // Will remove later - temporary added
     ksp(libs.kotlin.metadata.jvm)
     // Unit Test
