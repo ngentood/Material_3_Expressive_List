@@ -2,7 +2,13 @@ package com.nicos.material3expressivelist.presentation.expressive_list_screen.mo
 
 import android.content.Context
 import com.nicos.material3expressivelist.R
-import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
+import com.nicos.material3expressivelist.presentation.navigation.ButtonGroupsScreen
+import com.nicos.material3expressivelist.presentation.navigation.FabMenuScreen
+import com.nicos.material3expressivelist.presentation.navigation.FabMenuWithListScreen
+import com.nicos.material3expressivelist.presentation.navigation.FloatingToolBarScreen
+import com.nicos.material3expressivelist.presentation.navigation.FloatingToolBarWithListScreen
+import com.nicos.material3expressivelist.presentation.navigation.LoadingProgressIndicatorScreen
+import com.nicos.material3expressivelist.presentation.navigation.SplitButtonsScreen
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -17,49 +23,49 @@ class CreateExpressiveListDataModel(
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.button_groups),
-                    screenRoutes = ScreenRoutes.ButtonGroupsScreen
+                    screenRoutes = ButtonGroupsScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.split_buttons),
-                    screenRoutes = ScreenRoutes.SplitButtonsScreen
+                    screenRoutes = SplitButtonsScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.loading_progress_indicator),
-                    screenRoutes = ScreenRoutes.LoadingProgressIndicatorScreen
+                    screenRoutes = LoadingProgressIndicatorScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.fab_menu_with_list),
-                    screenRoutes = ScreenRoutes.FabMenuWithListScreen
+                    screenRoutes = FabMenuWithListScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.fab_menu),
-                    screenRoutes = ScreenRoutes.FabMenuScreen
+                    screenRoutes = FabMenuScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.floating_toolbar_with_list),
-                    screenRoutes = ScreenRoutes.FloatingToolBarWithListScreen
+                    screenRoutes = FloatingToolBarWithListScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
                     context.getString(R.string.floating_toolbar),
-                    screenRoutes = ScreenRoutes.FloatingToolBarScreen
+                    screenRoutes = FloatingToolBarScreen
                 )
             )
 
