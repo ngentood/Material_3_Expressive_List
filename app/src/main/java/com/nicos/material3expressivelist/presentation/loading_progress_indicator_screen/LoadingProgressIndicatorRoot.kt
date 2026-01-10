@@ -41,21 +41,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.graphics.shapes.RoundedPolygon
-import androidx.navigation.NavController
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 import kotlin.ranges.rangeTo
 
 @Composable
 fun LoadingProgressIndicatorRoot(
-    navController: NavController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
             CustomToolbar(
                 title = stringResource(R.string.loading_progress_indicator_title),
                 backButton = {
-                    navController.popBackStack()
+                    navigator.goBack()
                 }
             )
         }

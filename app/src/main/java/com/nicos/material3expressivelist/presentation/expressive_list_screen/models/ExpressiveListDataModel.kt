@@ -1,8 +1,8 @@
 package com.nicos.material3expressivelist.presentation.expressive_list_screen.models
 
-import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
+import androidx.navigation3.runtime.NavKey
 
 data class ExpressiveListDataModel(
     val title: String,
-    val screenRoutes: ScreenRoutes
+    val screenRoutes: NavKey
 )

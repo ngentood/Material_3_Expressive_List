@@ -42,20 +42,20 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.style.TextAlign
-import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.presentation.CustomToolbar
 import com.nicos.material3expressivelist.R
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 
 @Composable
 fun SplitButtonsRoot(
-    navController: NavHostController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
             CustomToolbar(
                 title = stringResource(R.string.split_buttons),
                 backButton = {
-                    navController.popBackStack()
+                    navigator.goBack()
                 }
             )
         }
