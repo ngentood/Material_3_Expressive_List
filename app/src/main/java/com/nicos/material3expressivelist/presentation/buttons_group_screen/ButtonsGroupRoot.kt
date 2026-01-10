@@ -27,9 +27,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 import com.nicos.material3expressivelist.ui.theme.Material3ExpressiveListTheme
 import kotlin.collections.fill
 import kotlin.collections.forEachIndexed
@@ -37,14 +37,14 @@ import kotlin.collections.lastIndex
 
 @Composable
 fun ButtonGroupsRoot(
-    navController: NavHostController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
             CustomToolbar(
                 title = "Button Groups",
                 backButton = {
-                    navController.popBackStack()
+                    navigator.goBack()
                 }
             )
         }

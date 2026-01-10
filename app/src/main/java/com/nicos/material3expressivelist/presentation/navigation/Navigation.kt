@@ -15,6 +15,7 @@ import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.floating_toolbar.FloatingToolbarRoot
 import com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.floating_toolbar_with_list.FloatingToolbarWithListRoot
+import com.nicos.material3expressivelist.presentation.buttons_group_screen.ButtonGroupsRoot
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.ExpressiveListRoot
 import com.nicos.material3expressivelist.presentation.fab_menu_screen.FabMenuRoot
 import com.nicos.material3expressivelist.presentation.fab_menu_with_list_screen.FabMenuWithListRoot
@@ -49,6 +50,12 @@ fun Navigation(innerPadding: PaddingValues) {
         entryProvider = entryProvider {
             entry<ExpressiveListScreen> {
                 ExpressiveListRoot(
+                    navigator = navigator
+                )
+            }
+
+            entry<ButtonGroupsScreen> {
+                ButtonGroupsRoot(
                     navigator = navigator
                 )
             }
