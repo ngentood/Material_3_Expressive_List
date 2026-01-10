@@ -10,16 +10,8 @@ class Navigator(val state: NavigationState) {
         state.stacksInUse.add(route)
     }
 
-    fun navigateToBottomNavItem(route: NavKey) {
-        state.stacksInUse.clear()
-        state.stacksInUse.add(route)
-    }
-
     fun goBack() {
-        state.stacksInUse.removeLastOrNull()
-    }
-
-    fun removeLast() {
-        state.stacksInUse.removeLastOrNull()
+        if (state.stacksInUse.size > 1)
+            state.stacksInUse.removeLastOrNull()
     }
 }
