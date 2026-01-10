@@ -42,17 +42,18 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 
 @Composable
 fun FloatingToolbarWithListRoot(
-    navController: NavController,
+    navigator: Navigator,
 ) {
     Scaffold(
         topBar = {
             CustomToolbar(
                 title = stringResource(R.string.floating_toolbar_with_list),
                 backButton = {
-                    navController.popBackStack()
+                    navigator.goBack()
                 }
             )
         }
