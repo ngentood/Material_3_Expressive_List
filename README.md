@@ -63,6 +63,10 @@ Elegant contextual toolbars that appear and disappear with smooth animations dur
 
 Beautifully styled and animated linear and circular indicators, including expressive variants.
 
+### **Sliders**
+
+Expressive and interactive standard, range, and centered sliders for selecting values.
+
 ---
 
 ## 📸 Examples
