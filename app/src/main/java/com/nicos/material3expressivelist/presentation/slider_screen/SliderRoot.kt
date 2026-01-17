@@ -5,8 +5,12 @@ package com.nicos.material3expressivelist.presentation.slider_screen
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -55,7 +59,19 @@ fun SliderRoot(
 private fun SliderScreen(
     paddingValues: PaddingValues
 ) {
-
+    Column(
+        modifier = Modifier.padding(
+            top = paddingValues.calculateTopPadding(),
+            start = 25.dp,
+            end = 25.dp,
+        )
+    ) {
+        StandardSliderExample()
+        Spacer(Modifier.height(40.dp))
+        RangeSliderExample()
+        Spacer(Modifier.height(40.dp))
+        CenteredSliderExample()
+    }
 }
 
 @Composable
