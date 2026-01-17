@@ -11,11 +11,14 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RangeSlider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberRangeSliderState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
@@ -91,6 +94,49 @@ private fun StandardSliderExample() {
         thumb = {
             CustomThumb(value = sliderPosition.toInt())
         }
+    )
+}
+
+@Composable
+private fun RangeSliderExample() {
+    val rangeSliderState =
+        rememberRangeSliderState(
+            activeRangeStart = 0f,
+            activeRangeEnd = 100f,
+            steps = 9,
+            valueRange = 0f..100f,
+        )
+
+    LaunchedEffect(rangeSliderState.activeRangeStart, rangeSliderState.activeRangeEnd) {
+        if (BuildConfig.DEBUG) {
+            Log.d(
+                "RangeSlider",
+                "Slider values at: ${rangeSliderState.activeRangeStart.toInt()} - ${rangeSliderState.activeRangeEnd.toInt()}"
+            )
+        }
+    }
+
+    val startThumbAndTrackColors =
+        SliderDefaults.colors(thumbColor = Color.Blue, activeTrackColor = Color.Red)
+    Text("Range Slider")
+    RangeSlider(
+        state = rangeSliderState,
+        startThumb = {
+            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+                value = rangeSliderState.activeRangeStart.toInt()
+            )
+        },
+        endThumb = {
+            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+                value = rangeSliderState.activeRangeEnd.toInt()
+            )
+        },
+        track = { rangeSliderState ->
+            SliderDefaults.Track(
+                colors = startThumbAndTrackColors,
+                rangeSliderState = rangeSliderState,
+            )
+        },
     )
 }
 
