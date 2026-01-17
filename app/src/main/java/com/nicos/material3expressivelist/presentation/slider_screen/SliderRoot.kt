@@ -46,7 +46,7 @@ fun SliderRoot(
     Scaffold(
         topBar = {
             CustomToolbar(
-                title = stringResource(id = R.string.slider),
+                title = stringResource(id = R.string.sliders),
                 backButton = {
                     navigator.goBack()
                 }

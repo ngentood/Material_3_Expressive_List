@@ -72,7 +72,7 @@ class CreateExpressiveListDataModel(
 
             list.add(
                 ExpressiveListDataModel(
-                    context.getString(R.string.slider),
+                    context.getString(R.string.sliders),
                     screenRoutes = SliderScreen
                 )
             )
