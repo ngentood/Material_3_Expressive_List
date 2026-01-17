@@ -8,6 +8,7 @@ import com.nicos.material3expressivelist.presentation.navigation.FabMenuWithList
 import com.nicos.material3expressivelist.presentation.navigation.FloatingToolBarScreen
 import com.nicos.material3expressivelist.presentation.navigation.FloatingToolBarWithListScreen
 import com.nicos.material3expressivelist.presentation.navigation.LoadingProgressIndicatorScreen
+import com.nicos.material3expressivelist.presentation.navigation.SliderScreen
 import com.nicos.material3expressivelist.presentation.navigation.SplitButtonsScreen
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -66,6 +67,13 @@ class CreateExpressiveListDataModel(
                 ExpressiveListDataModel(
                     context.getString(R.string.floating_toolbar),
                     screenRoutes = FloatingToolBarScreen
+                )
+            )
+
+            list.add(
+                ExpressiveListDataModel(
+                    context.getString(R.string.sliders),
+                    screenRoutes = SliderScreen
                 )
             )
 

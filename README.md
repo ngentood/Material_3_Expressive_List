@@ -63,6 +63,10 @@ Elegant contextual toolbars that appear and disappear with smooth animations dur
 
 Beautifully styled and animated linear and circular indicators, including expressive variants.
 
+### **Sliders**
+
+Expressive and interactive standard, range, and centered sliders for selecting values.
+
 ---
 
 ## 📸 Examples
@@ -77,6 +81,10 @@ Beautifully styled and animated linear and circular indicators, including expres
 | <img src="examples/fab_menu_with_list.gif" width="200"> | <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> |
 | *FAB expanding into a menu tied to scrolling content.*  |           *Toolbar that appears with list scrolling.*           |       *Expressive, animated progress indicators.*       |
 
+|              Sliders Component               | 
+|:--------------------------------------------:|
+| <img src="examples/sliders.gif" width="200"> |
+|             Expressive sliders.              |
 ---
 
 ## 📦 Installation & Setup
@@ -91,7 +99,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 
 ## 🧾 Versioning
 
-Material 3 version: 1.5.0-alpha11 <br />
+Material 3 version: 1.5.0-alpha12 <br />
 Target SDK version: 36 <br />
 Minimum SDK version: 29 <br />
 Kotlin version: 2.3.0 <br />
@@ -112,3 +120,4 @@ here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expre
     - [Progress Indicator](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#LinearWavyProgressIndicator(androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.drawscope.Stroke,androidx.compose.ui.graphics.drawscope.Stroke,androidx.compose.ui.unit.Dp,kotlin.Float,androidx.compose.ui.unit.Dp,androidx.compose.ui.unit.Dp))
     - [Fab Menu with list and Fab Menu standalone](https://m3.material.io/components/fab-menu/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
     - [Floating Toolbar with list and Floating Toolbar standalone](https://m3.material.io/components/toolbars/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
+    - [Sliders](https://m3.material.io/components/sliders/overview) <br />

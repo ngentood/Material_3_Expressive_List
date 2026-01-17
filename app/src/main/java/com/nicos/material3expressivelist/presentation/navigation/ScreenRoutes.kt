@@ -26,3 +26,6 @@ data object FloatingToolBarWithListScreen : NavKey
 
 @Serializable
 data object FloatingToolBarScreen : NavKey
+
+@Serializable
+data object SliderScreen : NavKey

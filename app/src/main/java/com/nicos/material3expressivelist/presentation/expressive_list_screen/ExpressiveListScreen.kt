@@ -85,7 +85,10 @@ fun ExpressiveListScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = paddingValues.calculateTopPadding())
+            .padding(
+                top = paddingValues.calculateTopPadding(),
+                bottom = paddingValues.calculateBottomPadding()
+            )
     ) {
         items(
             items = collectAsState,

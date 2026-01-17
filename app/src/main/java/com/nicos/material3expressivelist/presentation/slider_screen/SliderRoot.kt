@@ -1,0 +1,228 @@
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
+
+package com.nicos.material3expressivelist.presentation.slider_screen
+
+import android.util.Log
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RangeSlider
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberRangeSliderState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import com.nicos.material3expressivelist.BuildConfig
+import com.nicos.material3expressivelist.R
+import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
+
+@Composable
+fun SliderRoot(
+    navigator: Navigator
+) {
+    Scaffold(
+        topBar = {
+            CustomToolbar(
+                title = stringResource(id = R.string.sliders),
+                backButton = {
+                    navigator.goBack()
+                }
+            )
+        }
+    ) { paddingValues ->
+        SliderScreen(paddingValues = paddingValues)
+    }
+}
+
+@Composable
+private fun SliderScreen(
+    paddingValues: PaddingValues
+) {
+    Column(
+        modifier = Modifier.padding(
+            top = paddingValues.calculateTopPadding(),
+            start = 25.dp,
+            end = 25.dp,
+        )
+    ) {
+        StandardSliderExample()
+        Spacer(Modifier.height(40.dp))
+        RangeSliderExample()
+        Spacer(Modifier.height(40.dp))
+        CenteredSliderExample()
+    }
+}
+
+@Composable
+private fun StandardSliderExample() {
+    var sliderPosition by remember { mutableFloatStateOf(0F) }
+
+    Text(stringResource(R.string.standard_slider))
+    Slider(
+        value = sliderPosition,
+        onValueChange = {
+            sliderPosition = it
+            if (BuildConfig.DEBUG) {
+                Log.d("StandardSlider", "Slider value at: ${sliderPosition.toInt()}")
+            }
+        },
+        colors = SliderDefaults.colors(
+            thumbColor = MaterialTheme.colorScheme.secondary,
+            activeTrackColor = MaterialTheme.colorScheme.secondary,
+            inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+        ),
+        steps = 9,
+        valueRange = 0f..100f,
+        onValueChangeFinished = {
+            if (BuildConfig.DEBUG) {
+                Log.d("StandardSlider", "Slider value finished at: ${sliderPosition.toInt()}")
+            }
+        },
+        track = { sliderPositions ->
+            SliderDefaults.Track(
+                trackInsideCornerSize = 5.dp,
+                thumbTrackGapSize = 3.dp,
+                sliderState = sliderPositions,
+                modifier = Modifier
+                    .fillMaxWidth(),
+            )
+        },
+        thumb = {
+            CustomThumb(value = sliderPosition.toInt())
+        }
+    )
+}
+
+@Composable
+private fun RangeSliderExample() {
+    val rangeSliderState =
+        rememberRangeSliderState(
+            activeRangeStart = 0f,
+            activeRangeEnd = 100f,
+            steps = 9,
+            valueRange = 0f..100f,
+        )
+
+    LaunchedEffect(rangeSliderState.activeRangeStart, rangeSliderState.activeRangeEnd) {
+        if (BuildConfig.DEBUG) {
+            Log.d(
+                "RangeSlider",
+                "Slider values at: ${rangeSliderState.activeRangeStart.toInt()} - ${rangeSliderState.activeRangeEnd.toInt()}"
+            )
+        }
+    }
+
+    val startThumbAndTrackColors =
+        SliderDefaults.colors(thumbColor = Color.Blue, activeTrackColor = Color.Red)
+    Text(stringResource(R.string.range_slider))
+    RangeSlider(
+        state = rangeSliderState,
+        startThumb = {
+            CustomThumb(
+                value = rangeSliderState.activeRangeStart.toInt()
+            )
+        },
+        endThumb = {
+            CustomThumb(
+                value = rangeSliderState.activeRangeEnd.toInt()
+            )
+        },
+        track = { rangeSliderState ->
+            SliderDefaults.Track(
+                colors = startThumbAndTrackColors,
+                rangeSliderState = rangeSliderState,
+            )
+        },
+    )
+}
+
+@Composable
+private fun CenteredSliderExample() {
+    var sliderPosition by remember { mutableFloatStateOf(0f) }
+
+    Text(text = stringResource(R.string.centered_slider))
+    Slider(
+        value = sliderPosition,
+        onValueChange = {
+            sliderPosition = it
+            if (BuildConfig.DEBUG) {
+                Log.d("CenteredSlider", "Slider value at: ${sliderPosition.toInt()}")
+            }
+        },
+        colors = SliderDefaults.colors(
+            thumbColor = MaterialTheme.colorScheme.secondary,
+            activeTrackColor = MaterialTheme.colorScheme.secondary,
+            inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+        ),
+        steps = 9,
+        valueRange = -100f..100f,
+        onValueChangeFinished = {
+            if (BuildConfig.DEBUG) {
+                Log.d("CenteredSlider", "Slider value finished at: ${sliderPosition.toInt()}")
+            }
+        },
+        track = { sliderPositions ->
+            SliderDefaults.CenteredTrack(
+                trackInsideCornerSize = 5.dp,
+                thumbTrackGapSize = 3.dp,
+                sliderState = sliderPositions,
+                modifier = Modifier
+                    .fillMaxWidth(),
+            )
+        },
+        thumb = {
+            CustomThumb(
+                value = sliderPosition.toInt()
+            )
+        }
+    )
+}
+
+@Composable
+private fun CustomThumb(
+    value: Int,
+    color: Color = MaterialTheme.colorScheme.secondary
+) {
+    Box(
+        Modifier
+            .size(size = 30.dp)
+            .shadow(
+                elevation = 10.dp,
+                shape = CircleShape,
+            )
+            .background(
+                color = color,
+                shape = CircleShape
+            ),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = value.toString(),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onPrimary
+        )
+    }
+}
