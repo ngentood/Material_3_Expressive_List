@@ -46,4 +46,5 @@
     <string name="close_menu">Close menu</string>
     <string name="processes">Processes</string>
     <string name="back">Back</string>
+    <string name="slider">Slider</string>
 </resources>
