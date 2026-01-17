@@ -32,8 +32,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.nicos.material3expressivelist.BuildConfig
+import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
 import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 
@@ -78,7 +80,7 @@ private fun SliderScreen(
 private fun StandardSliderExample() {
     var sliderPosition by remember { mutableFloatStateOf(0F) }
 
-    Text("Slider")
+    Text(stringResource(R.string.standard_slider))
     Slider(
         value = sliderPosition,
         onValueChange = {
@@ -135,7 +137,7 @@ private fun RangeSliderExample() {
 
     val startThumbAndTrackColors =
         SliderDefaults.colors(thumbColor = Color.Blue, activeTrackColor = Color.Red)
-    Text("Range Slider")
+    Text(stringResource(R.string.range_slider))
     RangeSlider(
         state = rangeSliderState,
         startThumb = {
@@ -161,7 +163,7 @@ private fun RangeSliderExample() {
 private fun CenteredSliderExample() {
     var sliderPosition by remember { mutableFloatStateOf(0f) }
 
-    Text(text = "Centered Slider")
+    Text(text = stringResource(R.string.centered_slider))
     Slider(
         value = sliderPosition,
         onValueChange = {
