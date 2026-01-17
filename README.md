@@ -77,10 +77,10 @@ Beautifully styled and animated linear and circular indicators, including expres
 | <img src="examples/fab_menu_with_list.gif" width="200"> | <img src="examples/floating_toolbar_with_list.gif" width="200"> | <img src="examples/progress_indicator.gif" width="200"> |
 | *FAB expanding into a menu tied to scrolling content.*  |           *Toolbar that appears with list scrolling.*           |       *Expressive, animated progress indicators.*       |
 
-|               Slider Component               | 
+|              Sliders Component               | 
 |:--------------------------------------------:|
 | <img src="examples/sliders.gif" width="200"> |
-|        Expressive slider interaction.        |
+|             Expressive sliders.              |
 ---
 
 ## 📦 Installation & Setup
