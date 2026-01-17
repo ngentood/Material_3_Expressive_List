@@ -22,6 +22,7 @@ import com.nicos.material3expressivelist.presentation.fab_menu_with_list_screen.
 import com.nicos.material3expressivelist.presentation.loading_progress_indicator_screen.LoadingProgressIndicatorRoot
 import com.nicos.material3expressivelist.presentation.navigation.navigation_3.Navigator
 import com.nicos.material3expressivelist.presentation.navigation.navigation_3.navigationState
+import com.nicos.material3expressivelist.presentation.slider_screen.SliderRoot
 import com.nicos.material3expressivelist.presentation.split_buttons_screen.SplitButtonsRoot
 
 @Composable
@@ -92,6 +93,12 @@ fun Navigation(innerPadding: PaddingValues) {
 
             entry<FloatingToolBarScreen> {
                 FloatingToolbarRoot(
+                    navigator = navigator
+                )
+            }
+
+            entry<SliderScreen> {
+                SliderRoot(
                     navigator = navigator
                 )
             }
