@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 
 package com.nicos.material3expressivelist.presentation.slider_screen
 
@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RangeSlider
 import androidx.compose.material3.Scaffold
@@ -137,6 +138,48 @@ private fun RangeSliderExample() {
                 rangeSliderState = rangeSliderState,
             )
         },
+    )
+}
+
+@Composable
+private fun CenteredSliderExample() {
+    var sliderPosition by remember { mutableFloatStateOf(0f) }
+
+    Text(text = "Centered Slider")
+    Slider(
+        value = sliderPosition,
+        onValueChange = {
+            sliderPosition = it
+            if (BuildConfig.DEBUG) {
+                Log.d("CenteredSlider", "Slider value at: ${sliderPosition.toInt()}")
+            }
+        },
+        colors = SliderDefaults.colors(
+            thumbColor = MaterialTheme.colorScheme.secondary,
+            activeTrackColor = MaterialTheme.colorScheme.secondary,
+            inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+        ),
+        steps = 9,
+        valueRange = -100f..100f,
+        onValueChangeFinished = {
+            if (BuildConfig.DEBUG) {
+                Log.d("CenteredSlider", "Slider value finished at: ${sliderPosition.toInt()}")
+            }
+        },
+        track = { sliderPositions ->
+            SliderDefaults.CenteredTrack(
+                trackInsideCornerSize = 5.dp,
+                thumbTrackGapSize = 3.dp,
+                sliderState = sliderPositions,
+                modifier = Modifier
+                    .fillMaxWidth(),
+            )
+        },
+        thumb = {
+            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+                value = sliderPosition.toInt()
+            )
+        }
     )
 }
 
