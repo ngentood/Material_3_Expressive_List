@@ -123,12 +123,12 @@ private fun RangeSliderExample() {
     RangeSlider(
         state = rangeSliderState,
         startThumb = {
-            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+            CustomThumb(
                 value = rangeSliderState.activeRangeStart.toInt()
             )
         },
         endThumb = {
-            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+            CustomThumb(
                 value = rangeSliderState.activeRangeEnd.toInt()
             )
         },
@@ -176,7 +176,7 @@ private fun CenteredSliderExample() {
             )
         },
         thumb = {
-            com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.slider_screen.CustomThumb(
+            CustomThumb(
                 value = sliderPosition.toInt()
             )
         }
